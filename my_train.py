@@ -20,6 +20,7 @@ print ("Device being used:", device)
 
 # 2 相关超参数配置
 nEpochs = 201        # 迭代次数
+resume_epoch = 0     # 重复实验
 useTest = True       # 验证集使用
 nTestInterval = 20   # 多久用一次验证集
 snapshot = 5        # 多久保存一次数据
@@ -40,7 +41,7 @@ save_dir_root = os.path.join(os.path.dirname(os.path.abspath(__file__)))
 exp_name = os.path.dirname(os.path.abspath(__file__)).split('/')[-1]
 
 
-save_dir = os.path.join(save_dir_root, 'run', 'run_' + str(run_id))
+save_dir = os.path.join(save_dir_root, 'run', 'run_' + str(1))
 modelName = 'C3D'
 saveName = modelName + '-' + dataset
 
